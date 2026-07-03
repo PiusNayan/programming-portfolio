@@ -214,20 +214,6 @@ A menu-driven command-line ATM in [`atm_simulator.py`](atm_simulator.py). It loo
 
 ---
 
-## 🚀 Next Lesson
-
-**Week 3 – Day 2**
-
-Topics:
-
-- Lists and list methods
-- Tuples
-- Dictionaries
-- Sets
-- List comprehensions
-
----
-
 ## 📝 Reflection
 
 This session was mostly about getting comfortable with Python's core control flow tools. The practice exercises reinforced how `if` statements, loops, and string formatting work together in real programs. Writing clear section comments between exercises made the file easy to scan.
