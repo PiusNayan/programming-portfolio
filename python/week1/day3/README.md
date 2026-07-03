@@ -9,7 +9,7 @@
 
 ## 📖 Overview
 
-Week 3 focused on writing clean, readable Python code using control flow, loops, user input, and string formatting. I completed four practice exercises and built a menu-driven ATM simulator.
+Day 3 focused on writing clean, readable Python code using control flow, loops, user input, and string formatting. I completed four practice exercises and built a menu-driven ATM simulator.
 
 ---
 
@@ -192,8 +192,8 @@ A menu-driven command-line ATM in [`atm_simulator.py`](atm_simulator.py). It loo
 
 ## 📂 Source Files
 
-- [`day3_practice_day3.py`](day3_practice_day3.py) — four sequential practice exercises: Even or Odd, Multiplication Table, Password Checker, and Number Pattern
-- [`day3_atm_simulator.py`](day3_atm_simulator.py) — menu-driven ATM with Check Balance, Deposit, Withdraw, and Exit options
+- [`practice_day3.py`](practice_day3.py) — four sequential practice exercises: Even or Odd, Multiplication Table, Password Checker, and Number Pattern
+- [`atm_simulator.py`](atm_simulator.py) — menu-driven ATM with Check Balance, Deposit, Withdraw, and Exit options
 
 ---
 
