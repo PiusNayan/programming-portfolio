@@ -86,9 +86,9 @@ Example:
 
 ## 📂 Files
 
-- [flow_control_practice.py](flow_control_practice.py)
-- [guessing_game.py](guessing_game.py)
-- [notes.md](notes.md)
+- [`day2_flow_control_practice.py`](day2_flow_control_practice.py)
+- [`day2_guessing_game.py`](day2_guessing_game.py)
+- [`day2_notes.md`](day2_notes.md)
 
 ---
 

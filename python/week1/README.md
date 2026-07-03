@@ -281,3 +281,26 @@ I feel more confident writing basic Python programs and look forward to learning
 ---
 
 **Portfolio Goal:** Build a strong foundation in Python while maintaining a well-documented GitHub portfolio that demonstrates continuous learning and practical programming skills.
+
+---
+
+## 📌 Day 2 — Flow Control & Mini Project
+
+**Date:** June 24, 2026
+
+### Source Files
+- [`day2_flow_control_practice.py`](day2_flow_control_practice.py)
+- [`day2_guessing_game.py`](day2_guessing_game.py)
+- [`day2_notes.md`](day2_notes.md)
+- Day 2 notes also included in `notes.md`.
+
+---
+
+## 📌 Day 3 — Practice Exercises & ATM Simulator
+
+**Date:** July 1, 2026
+
+### Source Files
+- [`day3_practice_day3.py`](day3_practice_day3.py)
+- [`day3_atm_simulator.py`](day3_atm_simulator.py)
+- Full write-up: [`day3_README.md`](day3_README.md)
