@@ -1,15 +1,16 @@
 # Week 1 — Python Fundamentals
 
-**Date Range:** June 22 – July 1, 2026
+**Date Range:** June 22 – July 16, 2026
 
 ---
 
 ## 📖 Overview
 
-Week 1 covers the first three days of my Python learning journey:
+Week 1 covers the first four days of my Python learning journey:
 - **Day 1:** Python basics — variables, data types, input/output, and type conversion.
 - **Day 2:** Flow control — conditionals, loops, and the `random` module.
 - **Day 3:** Practice exercises — conditionals, loops, patterns, and an ATM simulator.
+- **Day 4:** Functions — defining functions, parameters, arguments, return values, and a Student Management System.
 
 ---
 
@@ -18,6 +19,7 @@ Week 1 covers the first three days of my Python learning journey:
 - **Book:** Automate the Boring Stuff with Python by Al Sweigart
   - Chapter 1: Python Basics
   - Chapter 2: Flow Control
+  - Chapter 3: Functions
 - **Videos:** Indently Python Playlist, CS50P
 
 ---
@@ -44,3 +46,12 @@ Week 1 covers the first three days of my Python learning journey:
 - [`day3/README.md`](day3/README.md)
 - [`day3/practice_day3.py`](day3/practice_day3.py)
 - [`day3/atm_simulator.py`](day3/atm_simulator.py)
+
+---
+
+### Day 4 — Introduction to Functions
+
+- [`day4/README.md`](day4/README.md)
+- [`day4/warmup_day4.py`](day4/warmup_day4.py)
+- [`day4/student_management.py`](day4/student_management.py)
+- [`day4/function-introduction-notes.md`](day4/function-introduction-notes.md)

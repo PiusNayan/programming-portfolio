@@ -233,7 +233,11 @@ feat(day4): add function exercises and student management system
 
 ## 🔗 Reference Links
 
+- [warmup_day4.py](./warmup_day4.py) — Warmup exercises (largest number, leap year, sum)
+- [student_management.py](./student_management.py) — Student Management System project
+- [function-introduction-notes.md](./function-introduction-notes.md) — Function concept notes
+
+<!-- Reference definitions used by inline badges in exercise headings above -->
 [warmup]: ./warmup_day4.py
 [sms]: ./student_management.py
 [notes]: ./function-introduction-notes.md
-
