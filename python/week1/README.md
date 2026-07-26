@@ -1,16 +1,17 @@
 # Week 1 — Python Fundamentals
 
-**Date Range:** June 22 – July 16, 2026
+**Date Range:** June 22 – July 26, 2026
 
 ---
 
 ## 📖 Overview
 
-Week 1 covers the first four days of my Python learning journey:
+Week 1 covers the first five days of my Python learning journey:
 - **Day 1:** Python basics — variables, data types, input/output, and type conversion.
 - **Day 2:** Flow control — conditionals, loops, and the `random` module.
 - **Day 3:** Practice exercises — conditionals, loops, patterns, and an ATM simulator.
-- **Day 4:** Functions — defining functions, parameters, arguments, return values, and a Student Management System.
+- **Day 4:** Functions I — defining functions, parameters, arguments, return values, and a Student Management System.
+- **Day 5:** Functions II — function sources, *args/**kwargs, default parameters, function types by purpose, and a Banking System.
 
 ---
 
@@ -55,3 +56,11 @@ Week 1 covers the first four days of my Python learning journey:
 - [`day4/warmup_day4.py`](day4/warmup_day4.py)
 - [`day4/student_management.py`](day4/student_management.py)
 - [`day4/function-introduction-notes.md`](day4/function-introduction-notes.md)
+
+---
+
+### Day 5 — Functions II
+
+- [`day5/README.md`](day5/README.md)
+- [`day5/warmup_day5.py`](day5/warmup_day5.py)
+- [`day5/banking_system.py`](day5/banking_system.py)
