@@ -2,15 +2,15 @@
 
 ## 📋 Lesson Overview
 
-Day 5 built directly on the Day 4 function introduction by going deeper into **how** and **when** functions are used. The session covered the three sources of functions available in Python, advanced argument passing techniques (`*args`, `**kwargs`, default parameters), the purpose of `return`, and how to classify functions by their role in a program. The day concluded with a **Banking System** mini-project that applied all these ideas.
+Day 5 built directly on Day 4 by going deeper into **how** and **when** functions are used. The session covered the three sources of functions available in Python, advanced argument passing (`*args`, `**kwargs`, default parameters), the purpose of `return`, and how to classify functions by their role in a program. The day ended with a **Banking System** mini-project that put all of these ideas into practice.
 
 ---
 
 ## 📚 Resources Used
 
-- Personal lecture notes — Functions II (see notes summary below)
+- Personal lecture notes — Functions II (sources, golden rule, function types by purpose)
 - [`warmup_day5.py`][warmup] — Four warmup exercises practising user-defined functions
-- [`banking_system.py`][banking] — End-of-day mini-project: a function-based banking system
+- [`banking_system.py`][banking] — End-of-day mini-project: a full menu-driven banking system
 
 ---
 
@@ -35,9 +35,7 @@ Functions solve all of these by storing logic **once** and **calling** it wherev
 ### Three Sources of Functions
 
 #### 1. Built-In Functions
-
 Pre-installed with Python — no import required.
-
 ```python
 print("Hello")   # output to console
 len("Python")    # length of a sequence
@@ -46,20 +44,16 @@ max(10, 20)      # largest value
 ```
 
 #### 2. Standard Library
-
 Developed and maintained by the Python team. Must be **imported** before use.
-
 ```python
 import math
 import datetime
 import random
 ```
-
-External packages (e.g. `pandas`, `matplotlib`, `numpy`) are also available but must be **installed first** (`pip install <package>`), then imported.
+External packages (e.g. `pandas`, `matplotlib`, `numpy`) must be **installed first** (`pip install <package>`), then imported.
 
 #### 3. User-Defined Functions
-
-Functions you create yourself for your specific program needs.
+Functions you write yourself for your specific program needs.
 
 ```python
 def greet(name):
@@ -67,7 +61,6 @@ def greet(name):
 ```
 
 #### The Golden Rule — Which Source to Use?
-
 ```
 1. Check built-in functions first
          ↓
@@ -80,15 +73,13 @@ def greet(name):
 
 ### Function Definition vs Function Call
 
-A function has two distinct parts:
-
 ```python
-# --- Definition: describes WHAT the function does ---
+# Definition — describes WHAT the function does
 def function_name():
-    # line of code
-    # line of code
+    # body
+    pass
 
-# --- Call: makes the function execute ---
+# Call — makes the function execute
 function_name()
 ```
 
@@ -100,9 +91,7 @@ The function **does nothing** until it is called.
 
 ```python
 def clean_name(first_name, last_name):
-    first = first_name.strip().capitalize()
-    second = last_name.strip().capitalize()
-    print(first + " " + second)
+    print(first_name.strip().capitalize() + " " + last_name.strip().capitalize())
 
 # Positional — order matters
 clean_name("MAYaM", "Pius")
@@ -117,14 +106,11 @@ clean_name(first_name="MAYaM", last_name="Pius")
 
 ### Default Parameters
 
-A parameter can be given a default value that is used when no argument is passed:
-
 ```python
 def clean_name(first_name, last_name, country="Ghana"):
     ...
 ```
-
-> **Rule:** Parameters **without** default values must appear **before** parameters with default values.
+> **Rule:** Parameters **without** default values must appear **before** those with default values.
 
 ---
 
@@ -133,7 +119,7 @@ def clean_name(first_name, last_name, country="Ghana"):
 Used when the number of arguments is not known in advance.
 
 ```python
-# *args — accepts any number of positional arguments (stored as a tuple)
+# *args — stored as a tuple
 def total(*args):
     return sum(args)
 
@@ -141,9 +127,8 @@ total(1, 2, 3)   # args = (1, 2, 3)
 ```
 
 ```python
-# **kwargs — accepts any number of keyword arguments (stored as a dict)
+# **kwargs — stored as a dictionary
 def create_user(**kwargs):
-    # kwargs = {"name": "Pius", "phone": "+233..."}
     print(kwargs)
 
 create_user(name="Pius", phone="+233...")
@@ -153,7 +138,6 @@ create_user(name="Pius", phone="+233...")
 |-|---------|------------|
 | Type | Tuple | Dictionary |
 | Argument style | Positional | Keyword |
-| Best used when | Data is of similar type | Data has different types/labels |
 
 ---
 
@@ -165,21 +149,19 @@ create_user(name="Pius", phone="+233...")
 def add(a, b):
     return a + b
 
-result = add(3, 4)   # result = 7 — value is preserved
+result = add(3, 4)   # result = 7
 ```
-
-Without `return`, the output is lost after the function finishes.
 
 ---
 
 ### Functions by Purpose
 
-| Type | Role | Examples |
-|------|------|---------|
-| **Action** | Performs a side effect — does not return a value | `print()`, `send_email()`, `show_menu()` |
-| **Transformational** | Takes raw data, processes it, returns the result | `celsius_to_fahrenheit()`, `deposit()` |
-| **Validation** | Checks a condition and returns `True` or `False` | `is_valid_age()`, `has_funds()` |
-| **Orchestrator** | Calls other functions in the correct order to control program flow | `main()`, `run_app()` |
+| Type | Role | Example in this project |
+|------|------|------------------------|
+| **Action** | Performs a side effect — no return value | `show_manu()` |
+| **Transformational** | Takes input, processes it, returns the result | `deposit()`, `withdraw()`, `check_balnce()` |
+| **Validation** | Checks a condition and returns `True` or `False` | *(handled inline in `main()`)* |
+| **Orchestrator** | Calls other functions in the correct order | `main()` |
 
 ---
 
@@ -189,8 +171,6 @@ All four warmup exercises are in [`warmup_day5.py`][warmup]:
 
 ### Exercise 1 — Greeting Function [`warmup_day5.py`][warmup]
 
-A simple **transformational function** that builds and returns a greeting string:
-
 ```python
 def greet(name):
     """Returns a personalised greeting message."""
@@ -199,11 +179,7 @@ def greet(name):
 print(greet("Yaw"))
 ```
 
----
-
 ### Exercise 2 — Rectangle Area [`warmup_day5.py`][warmup]
-
-Demonstrates **positional parameters** and a numeric `return` value:
 
 ```python
 def rectangle_area(length, width):
@@ -214,27 +190,21 @@ def rectangle_area(length, width):
 print(rectangle_area(10, 5))   # Output: 50
 ```
 
----
-
 ### Exercise 3 — Temperature Converter [`warmup_day5.py`][warmup]
-
-Two **transformational functions** applying temperature conversion formulas:
 
 ```python
 def celsius_to_fahrenheit(celsius):
     """Converts Celsius to Fahrenheit. Formula: F = (C × 9/5) + 32"""
-    return (celsius * 9 / 5) + 32
+    fahrenheit = (celsius * 9 / 5) + 32
+    return fahrenheit
 
 def fahrenheit_to_celsius(fahrenheit):
     """Converts Fahrenheit to Celsius. Formula: C = (F - 32) × 5/9"""
-    return (fahrenheit - 32) * 5 / 9
+    celsius = (fahrenheit - 32) * 5 / 9
+    return celsius
 ```
 
----
-
 ### Exercise 4 — Simple Calculator [`warmup_day5.py`][warmup]
-
-Four single-purpose functions — each performing one arithmetic operation. The `divide` function includes a **validation guard**:
 
 ```python
 def add(a, b):      return a + b
@@ -246,69 +216,102 @@ def divide(a, b):
     if b == 0:
         return "Cannot divide by zero"
     return a / b
-
-print(divide(100, 5))   # Output: 20.0
 ```
 
 ---
 
 ## 🏦 Banking System [`banking_system.py`][banking]
 
-A function-based console banking system that demonstrates all four function types in a single program.
+This is a full menu-driven banking system written in your own style. It goes significantly beyond the basic version — adding a complete `main()` orchestrator, `try/except` input validation, nested retry loops for amounts, and formatted output with separators and emojis.
 
 ### Functions Overview
 
-| Function | Type | Description |
-|----------|------|-------------|
+| Function | Type | Role |
+|----------|------|------|
 | `show_menu()` | Action | Prints the bank menu — no return value |
-| `check_balance()` | Action / Transformational | Returns current balance as a formatted string |
-| `deposit(amount)` | Transformational | Validates and adds amount to balance |
-| `withdraw(amount)` | Transformational | Validates and deducts amount from balance |
+| `check_balance()` | Transformational | Returns the current balance as a formatted string |
+| `deposit(amount)` | Transformational | Adds amount to balance, returns success message |
+| `withdraw(amount)` | Transformational | Deducts amount from balance, returns success message |
+| `main()` | Orchestrator | Runs the full program loop, routes to all other functions |
 
-### Key Implementation Details
+### Program Flow
 
-**Shared global state** — a single `balance` variable is shared across all functions using the `global` keyword:
-
-```python
-balance = 1000
-
-def deposit(amount):
-    global balance   # required to modify the outer variable
-    if amount <= 0:
-        return "Invalid amount."
-    balance += amount
-    return balance
+```
+main() starts
+    │
+    ├─ show_menu()          ← displays options every loop
+    │
+    ├─ try/except           ← catches invalid (non-numeric) menu input
+    │
+    ├─ choice == 1 ─────── check_balance()     ← shows balance
+    ├─ choice == 2 ─────── nested loop ──── deposit(amount)
+    ├─ choice == 3 ─────── nested loop ──── withdraw(amount)
+    ├─ choice == 4 ─────── break            ← exits program cleanly
+    └─ else ───────────── invalid message, loop restarts
 ```
 
-**Validation guards in `withdraw`** — two conditions are checked before any deduction:
+### Key Code Snippets
+
+**The `main()` orchestrator loop with `try/except` input guard:**
 
 ```python
-def withdraw(amount):
-    global balance
-
-    if amount <= 0:
-        return "Invalid amount."
-
-    if amount > balance:
-        return "Insufficient funds."
-
-    balance -= amount
-    return balance
+def main():
+    while True:
+        show_menu()
+        try:
+            choice = float(input("Enter an option: "))
+        except ValueError:
+            print("\n⚠️  Invalid input! Please enter a number between 1 and 4.")
+            continue
 ```
 
----
+**Deposit with nested retry loop and amount validation:**
 
-## ⚠️ Challenges Faced & Fixes Applied
+```python
+elif choice == 2:
+    while True:
+        try:
+            amount = float(input("Enter amount to deposit: "))
+        except ValueError:
+            print("⚠️  Invalid input! Please enter numbers only.\n")
+            continue
+        if amount == 0:
+            print("\nOperation cancelled.")
+            break
+        elif amount < 0:
+            print("⚠️  Invalid input! Enter a positive amount to deposit.\n")
+            continue
+        print(f'\n{deposit(amount)}')
+        break
+```
 
- created an unused local variable that shadowed the function name. Removed.
-- **Critical bug in `deposit()`** — `balance = deposit` on the original line 13 overwrote the numeric balance with the function object itself, breaking all subsequent operations. Fixed by removing the erroneous line (the `balance += amount` above it already performs the update correctly).
-- **Inconsistent validation in `deposit()`** — The original `deposit` rejected `amount < 0` but allowed `amount == 0`. Aligned with `withdraw`'s guard to reject `amount <= 0`.
+**Withdrawal with insufficient funds guard:**
 
----
+```python
+elif choice == 3:
+    while True:
+        ...
+        elif amount > balance:
+            print("Insufficient funds.")
+            continue
+        print(withdraw(amount))
+        break
+```
+
+**Clean exit:**
+
+```python
+elif choice == 4:
+    print(f"{'\U0001f44b THANK YOU \U0001f44b':^50}")
+    print("Thank you for banking with us! Have a great day. \U0001f600")
+    break
+```
+
+
 
 ## 💭 Reflection
 
-Day 5 made the concept of functions feel much more structured. Knowing there are three *sources* of functions (built-in, library, user-defined) and a clear order to check them before writing new code is a practical rule I'll carry forward. Classifying functions by *purpose* (action, transformational, validation, orchestrator) was particularly useful — it gave me a vocabulary for thinking about what a function is supposed to do before writing it. The Banking System was a satisfying project because it naturally combined all four function types in one program.
+Day 5 made function design feel much more intentional. Rewriting the Banking System in my own style — with a proper `main()` function, formatted output, and nested validation loops — showed how an orchestrator function brings structure to a whole program. Using `try/except` to handle bad input felt like a meaningful step up from just assuming the user enters the right thing. The classification of functions by purpose (action, transformational, validation, orchestrator) gave me a useful way to think about *what* each function should do before writing it.
 
 ---
 
@@ -316,28 +319,27 @@ Day 5 made the concept of functions feel much more structured. Knowing there are
 
 | Area | Rating | Notes |
 |------|--------|-------|
-| Sources of functions | ⭐⭐⭐⭐⭐ | Clear understanding of built-in → library → user-defined |
-| Function definition & call | ⭐⭐⭐⭐⭐ | Consistent and correct across all exercises |
-| Parameters & arguments | ⭐⭐⭐⭐☆ | Positional and keyword understood; *args/*kwargs still needs practice |
-| Return values | ⭐⭐⭐⭐☆ | Applied correctly; recognised the missing return bug in deposit |
-| Function types by purpose | ⭐⭐⭐⭐☆ | Can identify; orchestrator pattern not yet applied in projects |
-| Code quality & naming | ⭐⭐⭐☆☆ | Several typos found; improving with docstrings |
+| Function sources (built-in / library / user-defined) | ⭐⭐⭐⭐⭐ | Clear and applied correctly |
+| Function definition & calling | ⭐⭐⭐⭐⭐ | Consistent across all exercises and project |
+| Parameters & return values | ⭐⭐⭐⭐⭐ | Used correctly in all four exercise functions |
+| `try/except` input validation | ⭐⭐⭐⭐⭐ | Applied confidently in both menu and amount inputs |
+| Orchestrator pattern (`main()`) | ⭐⭐⭐⭐⭐ | Well structured — cleanly separates concerns |
 
-**Overall**: Strong conceptual day. The function taxonomy (by source and by purpose) gives a clear mental model for structuring programs going forward.
+**Overall**: Strong day — the Banking System shows real growth in thinking about program structure, not just individual functions.
 
 ---
 
 ## 📝 Git Commit Message
 
 ```
-feat(day5): add functions II exercises and banking system mini-project
+feat(day5): rewrite banking system with orchestrator and input validation
 
 - Add warmup_day5.py with four function exercises:
   greeting, rectangle area, temperature converter, simple calculator
-- Add banking_system.py: function-based banking system demonstrating
-  action, transformational, and validation function types
-- Fix typos in parameter names and docstrings across warmup_day5.py
-- Fix critical bug in banking_system.py: deposit() balance overwrite
+- Rewrite banking_system.py in student's own style:
+  add main() orchestrator, try/except input guards, nested retry loops
+  for deposit/withdraw amounts, formatted output with emoji headers
+- Add docstrings and section comments to all functions
 ```
 
 ---
